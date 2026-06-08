@@ -742,6 +742,12 @@ const _inlineRuntimeConfig = {
       "/__nuxt_error": {
         "cache": false
       },
+      "/api/backend/**": {
+        "proxy": {
+          "to": "https://certian-backend.onrender.com/api/**",
+          "_proxyStripBase": "/api/backend"
+        }
+      },
       "/_nuxt/builds/meta/**": {
         "headers": {
           "cache-control": "public, max-age=31536000, immutable"
@@ -756,7 +762,7 @@ const _inlineRuntimeConfig = {
   },
   "public": {
     "geminiApiKey": "",
-    "apiUrl": "http://localhost:5000/api",
+    "apiUrl": "https://certian-backend.onrender.com",
     "motion": {}
   }
 };

@@ -34,7 +34,14 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       geminiApiKey: process.env.GEMINI_API_KEY,
-      apiUrl: 'http://localhost:5000/api'
+      apiUrl: process.env.NUXT_PUBLIC_API_URL || '/api/backend'
+    }
+  },
+
+  // Proxy to bypass CORS issues with the deployed backend
+  routeRules: {
+    '/api/backend/**': { 
+      proxy: 'https://certian-backend.onrender.com/api/**' 
     }
   },
 

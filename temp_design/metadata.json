@@ -1,0 +1,6 @@
+{
+  "name": "Certian - Gestión de Retos",
+  "description": "Dashboard interactivo para la gestión de retos técnicos y reclutamiento de talento, con filtros, creación, edición y estadísticas en tiempo real.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

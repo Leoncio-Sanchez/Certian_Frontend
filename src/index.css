@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-primary: #ffffff;
+  --color-accent: #004a80;
+  --color-glass: rgba(255, 255, 255, 0.8);
+  --color-glass-border: rgba(0, 0, 0, 0.05);
+
+  --color-brand: var(--brand-color);
+  --color-brand-light: var(--brand-color-light);
+  --color-brand-dark: var(--brand-color-dark);
+}
+
+:root {
+  --brand-color: #7c3aed;
+  --brand-color-light: rgba(124, 58, 237, 0.2);
+  --brand-color-dark: #6d28d9;
+  --brand-gradient: linear-gradient(to right, #7c3aed, #4f46e5);
+}
+
+.premium-theme {
+  --brand-color: #1e3a8a; /* Blue 900 - Azul oscuro profundo */
+  --brand-color-light: rgba(30, 58, 138, 0.2);
+  --brand-color-dark: #172554; /* Blue 950 - Casi negro */
+  --brand-gradient: linear-gradient(to right, #1e40af, #1e3a8a); /* Blue 800 a Blue 900 */
+}
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900 font-sans antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-sans font-bold tracking-tight text-slate-900;
+  }
+}
+
+.glass-card {
+  @apply bg-white border border-slate-200 rounded-xl shadow-sm;
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-accent to-blue-600;
+}
+
+.section-label {
+  @apply text-[11px] uppercase tracking-wider font-bold text-blue-900/80 mb-2 block;
+}
+
+.brand-bg {
+  background-color: var(--brand-color);
+}
+
+.brand-text {
+  color: var(--brand-color);
+}
+
+.brand-border {
+  border-color: var(--brand-color);
+}
+
+.brand-shadow {
+  box-shadow: 0 10px 15px -3px var(--brand-color-light), 0 4px 6px -4px var(--brand-color-light);
+}
+
+.brand-bg-light {
+  background-color: var(--brand-color-light);
+}
+
+.brand-gradient {
+  background: var(--brand-gradient);
+}

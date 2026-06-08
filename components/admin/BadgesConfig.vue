@@ -1,0 +1,1 @@
+<template><div class='p-8'><h1 class='text-3xl font-black text-slate-900'>Módulo Administrativo</h1><p class='text-slate-500 mt-2 font-medium'>Esta funcionalidad está en desarrollo para el Super Administrador.</p></div></template>

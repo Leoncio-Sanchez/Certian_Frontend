@@ -1,0 +1,8 @@
+{
+  "name": "Remix: Certian UPeU",
+  "description": "Plataforma de validación de habilidades académicas para estudiantes de la UPeU mediante retos de proyectos reales.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

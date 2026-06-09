@@ -14,26 +14,26 @@ type HydrationStrategies = {
 type LazyComponent<T> = DefineComponent<HydrationStrategies, {}, {}, {}, {}, {}, {}, { hydrated: () => void }> & T
 
 interface _GlobalComponents {
-  Sidebar: typeof import("../../components/Sidebar.vue")['default']
-  AdminAudit: typeof import("../../components/admin/Audit.vue")['default']
-  AdminBadgesConfig: typeof import("../../components/admin/BadgesConfig.vue")['default']
-  AdminDashboard: typeof import("../../components/admin/Dashboard.vue")['default']
-  AdminInstitutions: typeof import("../../components/admin/Institutions.vue")['default']
-  AdminRoles: typeof import("../../components/admin/Roles.vue")['default']
-  AdminSettings: typeof import("../../components/admin/Settings.vue")['default']
-  AdminUsers: typeof import("../../components/admin/Users.vue")['default']
-  EmpresaChallengeEditor: typeof import("../../components/empresa/ChallengeEditor.vue")['default']
-  EmpresaCompanyProfile: typeof import("../../components/empresa/CompanyProfile.vue")['default']
-  EmpresaDashboard: typeof import("../../components/empresa/Dashboard.vue")['default']
-  EmpresaEvaluationSuite: typeof import("../../components/empresa/EvaluationSuite.vue")['default']
-  EmpresaNetworkingHub: typeof import("../../components/empresa/NetworkingHub.vue")['default']
-  EmpresaTalentExplorer: typeof import("../../components/empresa/TalentExplorer.vue")['default']
-  EstudianteBadges: typeof import("../../components/estudiante/Badges.vue")['default']
-  EstudianteChallenges: typeof import("../../components/estudiante/Challenges.vue")['default']
-  EstudianteDashboard: typeof import("../../components/estudiante/Dashboard.vue")['default']
-  EstudianteNetworking: typeof import("../../components/estudiante/Networking.vue")['default']
-  EstudianteProfile: typeof import("../../components/estudiante/Profile.vue")['default']
-  EstudianteRanking: typeof import("../../components/estudiante/Ranking.vue")['default']
+  Sidebar: typeof import("../../src/presentation/components/Sidebar.vue")['default']
+  AdminAudit: typeof import("../../src/presentation/components/admin/Audit.vue")['default']
+  AdminBadgesConfig: typeof import("../../src/presentation/components/admin/BadgesConfig.vue")['default']
+  AdminDashboard: typeof import("../../src/presentation/components/admin/Dashboard.vue")['default']
+  AdminInstitutions: typeof import("../../src/presentation/components/admin/Institutions.vue")['default']
+  AdminRoles: typeof import("../../src/presentation/components/admin/Roles.vue")['default']
+  AdminSettings: typeof import("../../src/presentation/components/admin/Settings.vue")['default']
+  AdminUsers: typeof import("../../src/presentation/components/admin/Users.vue")['default']
+  EmpresaChallengeEditor: typeof import("../../src/presentation/components/empresa/ChallengeEditor.vue")['default']
+  EmpresaCompanyProfile: typeof import("../../src/presentation/components/empresa/CompanyProfile.vue")['default']
+  EmpresaDashboard: typeof import("../../src/presentation/components/empresa/Dashboard.vue")['default']
+  EmpresaEvaluationSuite: typeof import("../../src/presentation/components/empresa/EvaluationSuite.vue")['default']
+  EmpresaNetworkingHub: typeof import("../../src/presentation/components/empresa/NetworkingHub.vue")['default']
+  EmpresaTalentExplorer: typeof import("../../src/presentation/components/empresa/TalentExplorer.vue")['default']
+  EstudianteBadges: typeof import("../../src/presentation/components/estudiante/Badges.vue")['default']
+  EstudianteChallenges: typeof import("../../src/presentation/components/estudiante/Challenges.vue")['default']
+  EstudianteDashboard: typeof import("../../src/presentation/components/estudiante/Dashboard.vue")['default']
+  EstudianteNetworking: typeof import("../../src/presentation/components/estudiante/Networking.vue")['default']
+  EstudianteProfile: typeof import("../../src/presentation/components/estudiante/Profile.vue")['default']
+  EstudianteRanking: typeof import("../../src/presentation/components/estudiante/Ranking.vue")['default']
   NuxtWelcome: typeof import("../../node_modules/nuxt/dist/app/components/welcome.vue")['default']
   NuxtLayout: typeof import("../../node_modules/nuxt/dist/app/components/nuxt-layout")['default']
   NuxtErrorBoundary: typeof import("../../node_modules/nuxt/dist/app/components/nuxt-error-boundary.vue")['default']
@@ -59,26 +59,26 @@ interface _GlobalComponents {
   Html: typeof import("../../node_modules/nuxt/dist/head/runtime/components")['Html']
   Body: typeof import("../../node_modules/nuxt/dist/head/runtime/components")['Body']
   NuxtIsland: typeof import("../../node_modules/nuxt/dist/app/components/nuxt-island")['default']
-  LazySidebar: LazyComponent<typeof import("../../components/Sidebar.vue")['default']>
-  LazyAdminAudit: LazyComponent<typeof import("../../components/admin/Audit.vue")['default']>
-  LazyAdminBadgesConfig: LazyComponent<typeof import("../../components/admin/BadgesConfig.vue")['default']>
-  LazyAdminDashboard: LazyComponent<typeof import("../../components/admin/Dashboard.vue")['default']>
-  LazyAdminInstitutions: LazyComponent<typeof import("../../components/admin/Institutions.vue")['default']>
-  LazyAdminRoles: LazyComponent<typeof import("../../components/admin/Roles.vue")['default']>
-  LazyAdminSettings: LazyComponent<typeof import("../../components/admin/Settings.vue")['default']>
-  LazyAdminUsers: LazyComponent<typeof import("../../components/admin/Users.vue")['default']>
-  LazyEmpresaChallengeEditor: LazyComponent<typeof import("../../components/empresa/ChallengeEditor.vue")['default']>
-  LazyEmpresaCompanyProfile: LazyComponent<typeof import("../../components/empresa/CompanyProfile.vue")['default']>
-  LazyEmpresaDashboard: LazyComponent<typeof import("../../components/empresa/Dashboard.vue")['default']>
-  LazyEmpresaEvaluationSuite: LazyComponent<typeof import("../../components/empresa/EvaluationSuite.vue")['default']>
-  LazyEmpresaNetworkingHub: LazyComponent<typeof import("../../components/empresa/NetworkingHub.vue")['default']>
-  LazyEmpresaTalentExplorer: LazyComponent<typeof import("../../components/empresa/TalentExplorer.vue")['default']>
-  LazyEstudianteBadges: LazyComponent<typeof import("../../components/estudiante/Badges.vue")['default']>
-  LazyEstudianteChallenges: LazyComponent<typeof import("../../components/estudiante/Challenges.vue")['default']>
-  LazyEstudianteDashboard: LazyComponent<typeof import("../../components/estudiante/Dashboard.vue")['default']>
-  LazyEstudianteNetworking: LazyComponent<typeof import("../../components/estudiante/Networking.vue")['default']>
-  LazyEstudianteProfile: LazyComponent<typeof import("../../components/estudiante/Profile.vue")['default']>
-  LazyEstudianteRanking: LazyComponent<typeof import("../../components/estudiante/Ranking.vue")['default']>
+  LazySidebar: LazyComponent<typeof import("../../src/presentation/components/Sidebar.vue")['default']>
+  LazyAdminAudit: LazyComponent<typeof import("../../src/presentation/components/admin/Audit.vue")['default']>
+  LazyAdminBadgesConfig: LazyComponent<typeof import("../../src/presentation/components/admin/BadgesConfig.vue")['default']>
+  LazyAdminDashboard: LazyComponent<typeof import("../../src/presentation/components/admin/Dashboard.vue")['default']>
+  LazyAdminInstitutions: LazyComponent<typeof import("../../src/presentation/components/admin/Institutions.vue")['default']>
+  LazyAdminRoles: LazyComponent<typeof import("../../src/presentation/components/admin/Roles.vue")['default']>
+  LazyAdminSettings: LazyComponent<typeof import("../../src/presentation/components/admin/Settings.vue")['default']>
+  LazyAdminUsers: LazyComponent<typeof import("../../src/presentation/components/admin/Users.vue")['default']>
+  LazyEmpresaChallengeEditor: LazyComponent<typeof import("../../src/presentation/components/empresa/ChallengeEditor.vue")['default']>
+  LazyEmpresaCompanyProfile: LazyComponent<typeof import("../../src/presentation/components/empresa/CompanyProfile.vue")['default']>
+  LazyEmpresaDashboard: LazyComponent<typeof import("../../src/presentation/components/empresa/Dashboard.vue")['default']>
+  LazyEmpresaEvaluationSuite: LazyComponent<typeof import("../../src/presentation/components/empresa/EvaluationSuite.vue")['default']>
+  LazyEmpresaNetworkingHub: LazyComponent<typeof import("../../src/presentation/components/empresa/NetworkingHub.vue")['default']>
+  LazyEmpresaTalentExplorer: LazyComponent<typeof import("../../src/presentation/components/empresa/TalentExplorer.vue")['default']>
+  LazyEstudianteBadges: LazyComponent<typeof import("../../src/presentation/components/estudiante/Badges.vue")['default']>
+  LazyEstudianteChallenges: LazyComponent<typeof import("../../src/presentation/components/estudiante/Challenges.vue")['default']>
+  LazyEstudianteDashboard: LazyComponent<typeof import("../../src/presentation/components/estudiante/Dashboard.vue")['default']>
+  LazyEstudianteNetworking: LazyComponent<typeof import("../../src/presentation/components/estudiante/Networking.vue")['default']>
+  LazyEstudianteProfile: LazyComponent<typeof import("../../src/presentation/components/estudiante/Profile.vue")['default']>
+  LazyEstudianteRanking: LazyComponent<typeof import("../../src/presentation/components/estudiante/Ranking.vue")['default']>
   LazyNuxtWelcome: LazyComponent<typeof import("../../node_modules/nuxt/dist/app/components/welcome.vue")['default']>
   LazyNuxtLayout: LazyComponent<typeof import("../../node_modules/nuxt/dist/app/components/nuxt-layout")['default']>
   LazyNuxtErrorBoundary: LazyComponent<typeof import("../../node_modules/nuxt/dist/app/components/nuxt-error-boundary.vue")['default']>

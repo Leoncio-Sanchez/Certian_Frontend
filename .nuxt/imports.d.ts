@@ -30,7 +30,10 @@ export { requestIdleCallback, cancelIdleCallback } from '#app/compat/idle-callba
 export { setInterval } from '#app/compat/interval';
 export { definePageMeta } from '../node_modules/nuxt/dist/pages/runtime/composables';
 export { defineLazyHydrationComponent } from '#app/composables/lazy-hydration';
-export { useTheme } from '../composables/useTheme';
-export { useUser } from '../composables/useUser';
-export { INITIAL_CANDIDATES, INITIAL_CHALLENGES, INITIAL_EVALUATIONS, MENTORS, IMMERSION_ITEMS, DEFAULT_COMPANY_PROFILE } from '../utils/empresaData';
+export { INITIAL_CANDIDATES, INITIAL_CHALLENGES, INITIAL_EVALUATIONS, MENTORS, IMMERSION_ITEMS, DEFAULT_COMPANY_PROFILE } from '../src/utils/empresaData';
+export { useTheme } from '../src/presentation/composables/useTheme';
+export { useUser } from '../src/presentation/composables/useUser';
+export { useAdminRepository } from '../src/data/repositories/AdminRepository';
+export { useAuthRepository } from '../src/data/repositories/AuthRepository';
+export { useLoginUseCase } from '../src/core/usecases/auth/LoginUseCase';
 export { reactiveStyle, reactiveTransform, useElementStyle, useElementTransform, useMotion, useMotionControls, useMotionProperties, useMotions, useMotionTransitions, useMotionVariants, useSpring, useReducedMotion } from '../node_modules/@vueuse/motion/dist/nuxt/runtime/composables/index';

@@ -2,6 +2,26 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  srcDir: 'src/',
+
+  dir: {
+    pages: 'presentation/pages',
+    layouts: 'presentation/layouts',
+    middleware: 'presentation/middleware',
+  },
+
+  components: [
+    { path: '~/presentation/components', pathPrefix: true },
+  ],
+
+  imports: {
+    dirs: [
+      'presentation/composables',
+      'data/repositories',
+      'core/usecases/**',
+    ]
+  },
+
   compatibilityDate: '2024-11-01',
   devtools: { enabled: false },
 
@@ -19,7 +39,7 @@ export default defineNuxtConfig({
     ],
   },
 
-  css: ['~/src/index.css'],
+  css: ['~/assets/css/index.css'],
 
   app: {
     head: {
@@ -34,14 +54,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       geminiApiKey: process.env.GEMINI_API_KEY,
-      apiUrl: process.env.NUXT_PUBLIC_API_URL || '/api/backend'
-    }
-  },
-
-  // Proxy to bypass CORS issues with the deployed backend
-  routeRules: {
-    '/api/backend/**': { 
-      proxy: 'https://certian-backend.onrender.com/api/**' 
+      apiUrl: process.env.NUXT_PUBLIC_API_URL || 'http://localhost:5000/api'
     }
   },
 
